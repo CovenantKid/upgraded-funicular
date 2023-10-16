@@ -6,24 +6,34 @@
 
 
 * {
-background-color:#111;
-color:#f5f5f5;
+ background-color:#111;
+ color:#f5f5f5;
 
 }
 
 .header{
- font-size: 30px;
- text-align: center;
+  font-size: 30px;
+  text-align: center;
 }
 
-.Question{
- display:flex   
+.QuestionArea{
+  display:flex;
+  border-style: solid;
+  width: 100%;
+  box-shadow: 1px 1px 1px white;
+  justify-content: space-evenly;
+    font-size: 30px;
 }
+.Button{
+ display: block;
+ font-size: 22px;
+ cursor: pointer; 
 
-
+}
 
 @media (max-width: 480px) {
-.header{
+.header,.QuestionArea{
 font-size: 20px; 
 }
+
 }
