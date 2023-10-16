@@ -1,0 +1,29 @@
+/* Used colors for styling */
+/* black backgrounding on white smoke text*/
+/* black = #111*/
+/* text whitesmoke or #f5f5f5 */
+
+
+
+* {
+background-color:#111;
+color:#f5f5f5;
+
+}
+
+.header{
+ font-size: 30px;
+ text-align: center;
+}
+
+.Question{
+ display:flex   
+}
+
+
+
+@media (max-width: 480px) {
+.header{
+font-size: 20px; 
+}
+}
