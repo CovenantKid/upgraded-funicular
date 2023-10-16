@@ -24,11 +24,14 @@
   justify-content: space-evenly;
     font-size: 30px;
 }
-.Button{
- display: block;
- font-size: 22px;
- cursor: pointer; 
-
+.questionFooter{
+  text-align: center;
+}
+#button{
+  display: block;
+  margin: auto;
+  font-size: 40px;
+ 
 }
 
 @media (max-width: 480px) {
