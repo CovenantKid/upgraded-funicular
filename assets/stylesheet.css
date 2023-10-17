@@ -21,18 +21,21 @@
   border-style: solid;
   width: 100%;
   box-shadow: 1px 1px 1px white;
-  justify-content: space-evenly;
-    font-size: 30px;
+  justify-content:center;
+  font-size: 30px;
 }
 .questionFooter{
   text-align: center;
 }
-#button{
+#buttonStart{
   display: block;
   margin: auto;
   font-size: 40px;
+  margin-top: 2%;
+  cursor:pointer;
  
 }
+
 
 @media (max-width: 480px) {
 .header,.QuestionArea{
