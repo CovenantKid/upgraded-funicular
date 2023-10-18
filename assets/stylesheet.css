@@ -24,6 +24,9 @@
   justify-content:center;
   font-size: 30px;
 }
+#QuestionText{
+  font-size: 25px
+}
 .questionFooter{
   text-align: center;
 }
