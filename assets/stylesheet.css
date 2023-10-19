@@ -38,7 +38,18 @@
   cursor:pointer;
  
 }
-
+/* to initially be hidden */
+.options{
+ font-size: 25px;
+ cursor: pointer;
+text-align: center;
+}
+#option1,#option2,#option3{
+  margin: auto;
+}
+#timeClock{
+  display: block;
+}
 
 @media (max-width: 480px) {
 .header,.QuestionArea{
