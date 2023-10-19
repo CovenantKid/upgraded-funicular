@@ -38,7 +38,14 @@
   cursor:pointer;
  
 }
-/* to initially be hidden */
+#buttonSubmit{
+  display: block;
+  margin: auto;
+  font-size: 40px;
+  margin-top: 2%;
+  cursor:pointer;
+}
+
 .options{
  font-size: 25px;
  cursor: pointer;
