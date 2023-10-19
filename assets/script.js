@@ -1,19 +1,20 @@
    // storing score 
    score = 0;
+   questionsPassed = 0;
 
 
 
 // Defines the input that is made when you go to save your score.
    const NameField = document.createElement("input");
-   NameField.classList.add('QuestionArea')
+   NameField.classList.add('QuestionArea');
 
-   const SubmitScoreButton = document.createElement("button")
-   SubmitScoreButton.id = ('ButtonStart')
-   SubmitScoreButton.textContent = ('Submit score')
-   SubmitScoreButton.addEventListener("click", saveScore)
+   const SubmitScoreButton = document.createElement("button");
+   SubmitScoreButton.id = ('ButtonStart');
+   SubmitScoreButton.textContent = ('Submit score');
+   SubmitScoreButton.addEventListener("click", saveScore);
 
-   const ScoreTag = document.createElement("p")
-   ScoreTag.id = ("leaderboard")
+   const ScoreTag = document.createElement("p");
+   ScoreTag.id = ("leaderboard");
 
 
 //    listens for click and starts quiz when button is pressed.
@@ -21,7 +22,7 @@
     // Defines the new button that is made when the quiz is started.
      const GenerateButton = document.createElement("button");
      GenerateButton.textContent = ("Submit answer");
-     GenerateButton.classList.add("questionFooter")
+     GenerateButton.classList.add("questionFooter");
      GenerateButton.id = ("buttonStart");
      GenerateButton.addEventListener("click", submitAnswer);
 // called when the user presses start on the quiz
@@ -81,6 +82,11 @@ ScoreTag.textContent += "      "
 
 }
 
+var QuestionTexts=["what tag is used to create a link between HTML and javascript? 1.<link> 2.<script> 3.<div>",
+ "Question 2", "question 3"]
+
 function GetQuestion(){
-    
+activeQuestion = QuestionTexts[0]
+questionsPassed = questionsPassed + 1
+
 }
