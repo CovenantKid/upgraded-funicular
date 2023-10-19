@@ -28,7 +28,7 @@
  function startQuiz(){
     document.getElementById("buttonStart").remove();
     document.body.appendChild(GenerateButton);
-    $('#QuestionText').text("how goes everything?");
+    $('#QuestionText').text(GetQuestion);
      Quiztime = setInterval(clearQuiz,1000,time= 120,);
 
  }
@@ -58,12 +58,15 @@ function submitAnswer(){
     score = score + 5;
     console.log(score);
     console.log("Correct!");
+    GetQuestion()
     return score
 }
     else{
      console.log("Incorrect!")
      time = time - 5   
+     GetQuestion()
     }
+
 }  
 
 function saveScore(){
@@ -76,4 +79,8 @@ ScoreTag.textContent += " "
 ScoreTag.textContent += Name
 ScoreTag.textContent += "      "
 
+}
+
+function GetQuestion(){
+    
 }
