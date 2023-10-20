@@ -1,7 +1,7 @@
    // storing score 
    score = 0;
    questionsPassed = 0;
-
+   loadScore()
 
 
 
@@ -80,6 +80,15 @@ ScoreTag.textContent += " "
 ScoreTag.textContent += Name
 ScoreTag.textContent += "      "
 
+}
+function loadScore(){
+    localStorage.getItem("Score",score)
+    localStorage.getItem("Name",Name)
+    document.body.appendChild(ScoreTag)
+    ScoreTag.textContent += score
+    ScoreTag.textContent += " "
+    ScoreTag.textContent += Name
+    ScoreTag.textContent += "      "
 }
 // storing the text of the question and its answer
 var QuestionTexts=["what tag is used to create a link between HTML and javascript? 1.<link> 2.<script> 3.<div>",
