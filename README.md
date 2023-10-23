@@ -4,3 +4,6 @@ Small coding quiz to test myself.
 ![Preview picture](assets/Images/image.png)
 
 The code in this project was made from scratch in HTML,CSS,and javscript using jquery.
+
+# deployed page link: 
+https://covenantkid.github.io/upgraded-funicular/
