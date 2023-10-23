@@ -1,7 +1,7 @@
    // storing score 
    score = 0;
    questionsPassed = 0;
-   loadScore()
+   initials = null
 
 
 
@@ -15,11 +15,11 @@
    SubmitScoreButton.addEventListener("click", saveScore);
 
    const ScoreTag = document.createElement("p");
-   ScoreTag.id = ("leaderboard");
+   ScoreTag.classList.add = ("leaderboard");
 
 
 //    listens for click and starts quiz when button is pressed.
-   document.getElementById("buttonStart").addEventListener("click", startQuiz);
+document.getElementById("buttonStart").addEventListener("click", startQuiz);
     // Defines the new button that is made when the quiz is started.
      const GenerateButton = document.createElement("button");
      GenerateButton.textContent = ("Submit answer");
@@ -46,6 +46,8 @@ function clearQuiz(){
          clearInterval(Quiztime)
         document.body.appendChild(NameField)
         document.body.appendChild(SubmitScoreButton)
+        document.body.appendChild(ScoreTag)
+        loadScore()
         
     }
     else{
@@ -71,26 +73,28 @@ function submitAnswer(){
 }  
 
 function saveScore(){
-Name = NameField.value
-localStorage.setItem("Score",score)
-localStorage.setItem("Name",Name)
-document.body.appendChild(ScoreTag)
-ScoreTag.textContent += score
-ScoreTag.textContent += " "
-ScoreTag.textContent += Name
-ScoreTag.textContent += "      "
-
-}
-function loadScore(){
-    localStorage.getItem("Score",score)
-    localStorage.getItem("Name",Name)
+    initials = NameField.value
+    localStorage.setItem("Score",score)
+    localStorage.setItem("initials", initials)
     document.body.appendChild(ScoreTag)
     ScoreTag.textContent += score
     ScoreTag.textContent += " "
-    ScoreTag.textContent += Name
+    ScoreTag.textContent += initials
     ScoreTag.textContent += "      "
+
+
+
 }
-// storing the text of the question and its answer
+     function loadScore(){
+         initials = localStorage.getItem("initials",initials)
+         localStorage.getItem("Score",score)
+        ScoreTag.textContent += score
+        ScoreTag.textContent += " "
+        ScoreTag.textContent += initials
+        ScoreTag.textContent += "      " }
+        
+
+//  storing the text of the question and its answer
 var QuestionTexts=["what tag is used to create a link between HTML and javascript? 1.<link> 2.<script> 3.<div>",
  "Which symbol is used to make a class in CSS? 1. A period 2.A hashtag 3.A dollar sign",
 "read the following line: var numbers = [1,2,3] if you need to select the 2 in this variable, which of the following would work? 1.console.log(numbers) 2.console.log(numbers[1]) 3.console.log(numbers[2])",
